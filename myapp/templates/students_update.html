@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Redaktirovat studenta</title>
+</head>
+<body>
+
+    <h1>
+        Redaktirovanie studenta: {{ student }}
+    </h1>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+           Soxranit
+        </button>
+
+        <a href="{% url 'students' %}">
+            Otmena
+        </a>
+
+    </form>
+
+</body>
+</html>
